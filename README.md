@@ -1,7 +1,13 @@
 # Python with SQL
 ### Apply CRUD
 `create`, `read`, `update`, `delete`
+
 ### Making data persistent
+The data still remains in the system after the processes
+have ended. For example, your account information is retained,
+so you don't have to create an account each time you access
+a website.
+
 ### Establishing a connection with PYODBC
 The following code establishes a connection from the 
 `Northwind` database and Python, with `pyodbc`. 
@@ -23,6 +29,7 @@ If the connection doesn't work, install the dependencies from
 [this link](https://docs.microsoft.com/en-gb/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver15)
 and follow the instructions for your OS.
 
+### Validate connection
 To check if your connection has been validated, create a 
 `cursor` from your connection and run an initial query.
 ```python
@@ -31,6 +38,7 @@ cursor = docker_Northwind.cursor()
 print(cursor.execute("SELECT @@version;"))
 ```
 
+### Running queries
 The following will query the Customers table. The `fetchall()`
 method gets all the records from the table and outputting
 the result will display the records on a single line.
