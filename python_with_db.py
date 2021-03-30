@@ -2,10 +2,10 @@
 import pyodbc
 
 # Establish the connection using PYODBC
-server = "18.135.103.95"
+server = "xxx"
 database = "Northwind"
-username = "SA"
-password = "Passw0rd2018"
+username = "xxx"
+password = "xxx"
 docker_Northwind = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};'
                                   'SERVER='+server+';DATABASE='+database+';'
                                   'UID='+username+';PWD='+ password)
@@ -37,14 +37,5 @@ while True:
         break
     print(record)
 
-
-
 # Close the connection
 docker_Northwind.close()
-
-
-
-
-
-
-
